@@ -55,23 +55,23 @@ This is reaching the end of this tutorial, so now to conclude the repository mak
 
 1. Update your packages.sh file. To do so, crack open the packages.sh file, and you should see `dpkg-deb -b Package`. Repeat this pattern for every package that your have in your repository, so if you were to have 3 packages, the packages.sh file should look like so. Keep in mind that the name of the package is the same as the folder name in the repository.
 
-```markdown
-dpkg-deb -b Package
-dpkg-deb -b Package2
-dpkg-deb -b Package3
-```
+    ```markdown
+    dpkg-deb -b Package
+    dpkg-deb -b Package2
+    dpkg-deb -b Package3
+    ```
 
 2. Run the update.sh file in your terminal by typing `./update.sh`. If you get an error mid-way, run this command: `chmod +x packages.sh && chmod +x remove.sh && chmod +x update.sh`. Then, run the file again.
 3. Now that you have all of your .debs properly built, you need to send the files along with the Packages.bz2 to the Git repository of your choice. If you are not using GitHub, you are done with these steps. Otherwise, create a GitHub repository on the [GitHub website](https://github.com/) with *this name:* `[your github username].github.com`. Replace the [your github username] part with your actual GitHub username. **This is very important.**
 4. Now, in your favourite terminal full of rainbows and sparkles and glitter and ponies and all that neat stuff, type the following set of commands in the repository directory:
 
-```markdown
-git init
-git remote add origin https://github.com/[your github username]/[your github username].github.com.git
-git add --all
-git commit -m "[Put a creative name for this commit here.]"
-git push origin master
-```
+    ```markdown
+    git init
+    git remote add origin https://github.com/[your github username]/[your github username].github.com.git
+    git add --all
+    git commit -m "[Put a creative name for this commit here.]"
+    git push origin master
+    ```
 
 5. ????????????
 6. Congratulations! You may have your PROFIT you've been waiting for. Your repository should now be up and running at `http://[your github username].github.com/`! Add that web address to your Cydia sources and behold your packages should appear!
