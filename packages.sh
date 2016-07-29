@@ -1,1 +1,1 @@
-dpkg-deb -b Package
+dpkg-deb -Zgzip -b Package
